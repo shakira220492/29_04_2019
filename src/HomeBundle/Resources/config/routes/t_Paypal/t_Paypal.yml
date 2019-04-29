@@ -1,0 +1,11 @@
+paypal_form:
+    path:     /paypal
+    defaults: { _controller: PaypalBundle:Paypal:paypalForm }
+    
+paypal_success_form:
+    path:     /success
+    defaults: { _controller: PaypalBundle:Paypal:success }
+    
+paypal_failure_form:
+    path:     /failure
+    defaults: { _controller: PaypalBundle:Paypal:failure }

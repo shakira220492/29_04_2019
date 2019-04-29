@@ -1,0 +1,44 @@
+<style>
+    #facebooklogin {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 210px; 
+        height: 40px;
+        cursor: pointer; 
+        opacity: 1; 
+        z-index: 10;
+        display: block;        
+    }
+</style>
+
+{#{{ form_start(facebook_form_ajax, { 'attr' : {'novalidate': 'novalidate', 'role' : 'form', 'id': 'facebook-ajax'|default('form')} }) }}
+{{ form_end(facebook_form_ajax) }}#}
+
+<div id='facebooklogin'>
+    <a
+        href="{{ asset('x_Facebook/facebook') }}"
+        target="_blank">
+        <img 
+            style='height: 100%; width: 100%;' 
+            src='files/images/icons/facebook-login.png' 
+            alt='Mountain View'>
+    </a>
+</div>
+        
+{#<script>
+    
+    function ()
+    {
+        var form = $('#facebook-ajax');
+        var url = form.attr('action');
+
+        $.post(url, function (data)
+        {
+            alert("facebook-ajax");
+        }).fail(function () {
+            alert('ERROR facebook-ajax');
+        });
+    }
+
+</script>#}
